@@ -1,0 +1,245 @@
+.company-description-path {
+  &__title {
+    position: relative;
+    height: 40px;
+    width: 4px;
+    background: $highlight;
+    border-radius: 0 4px 4px 0;
+
+    &::before {
+      content: "Услуги и сервисы";
+      position: absolute;
+      font-family: $font-bold;
+      letter-spacing: -0.6px;
+      font-size: 28px;
+      white-space: nowrap;
+    }
+  }
+
+  &__page-navigation-list {
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    align-items: baseline;
+  }
+
+  &__item {
+    white-space: nowrap;
+    margin-left: 16px;
+    padding: 9px 15px;
+    letter-spacing: -0.1px;
+  }
+
+  &__item--active {
+    border: 2px solid $highlight;
+    border-radius: 6px;
+    background-color: $container-background;
+  }
+
+  &__company-description {
+    display: flex;
+  }
+
+  &__excerpt {
+    overflow: hidden;
+  }
+
+  &__signboard {
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.img-read-more {
+  display: inline-block;
+  width: 8px;
+  height: 11px;
+  background: url("../img/decorate/css_sprites.png") -128px -10px;
+}
+
+.text-read-more {
+  display: inline-block;
+  font-size: 16px;
+
+  &::before {
+    content: "Читать далее";
+    margin-left: 15px;
+    letter-spacing: -0.3px;
+  }
+}
+
+.img-read-less {
+  display: inline-block;
+  width: 8px;
+  height: 11px;
+  background: url("../img/decorate/css_sprites.png") -128px -10px;
+  transform: rotate(180deg);
+}
+
+.text-read-less {
+  display: inline-block;
+  font-size: 16px;
+  letter-spacing: -0.3px;
+
+  &::before {
+    content: "Свернуть";
+    margin-left: 15px;
+  }
+}
+
+details[open] .read-more {
+  display: none;
+}
+
+details .read-less {
+  display: none;
+}
+
+details[open] .read-less {
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 320px) {
+  .company-description-path {
+    background-color: $background;
+    &__title {
+      top: 23px;
+      margin-bottom: 48px;
+
+      &::before {
+        top: 5px;
+        left: 16px;
+      }
+    }
+
+    &__company-description {
+      flex-direction: column;
+    }
+
+    &__excerpt {
+      margin: 23px 13px 0 14px;
+      height: 90px;
+      letter-spacing: -0.9px;
+    }
+
+    details[open] &__excerpt {
+      height: 100%;
+    }
+
+    &__read-more,
+    &__read-less {
+      margin: 20px 0 18px 24px;
+    }
+  }
+}
+
+@media screen and (min-width: 321px) and (max-width: 1439px) {
+  .company-description-path {
+    &__title {
+      top: 23px;
+      margin-bottom: 56px;
+
+      &::before {
+        top: 5px;
+        left: 24px;
+      }
+    }
+
+    &__item {
+      margin-left: 24px;
+    }
+
+    &__company-description {
+      margin-top: 33px;
+      margin-bottom: 33px;
+      padding: 0 24px;
+      justify-content: space-between;
+    }
+
+    &__details {
+      flex: 0 1 43%;
+    }
+
+    &__excerpt {
+      height: 159px;
+      letter-spacing: -0.9px;
+      line-height: 20px;
+    }
+
+    &__signboard {
+      padding-top: 4px;
+      flex: 0 1 50%;
+      img {
+        border-radius: 6px;
+      }
+    }
+
+    details[open] &__excerpt {
+      height: 100%;
+    }
+
+    &__read-more,
+    &__read-less {
+      margin: 13px 0 18px 8px;
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .company-description-path {
+    &__title {
+      position: absolute;
+      top: 42px;
+      left: 2px;
+      &::before {
+        top: 5px;
+        left: 33px;
+      }
+    }
+
+    &__page-navigation {
+      margin-top: 4px;
+      margin-left: 22px;
+      line-height: 1.4;
+    }
+
+    &__page-navigation-list {
+      overflow: hidden;
+      flex-wrap: wrap;
+    }
+
+    &__company-description {
+      margin-left: 30px;
+    }
+
+    &__details {
+      flex: 0 1 46%;
+      margin-top: 11px;
+    }
+
+    &__excerpt {
+      height: 159px;
+      letter-spacing: -0.9px;
+      line-height: 20px;
+    }
+
+    &__signboard {
+      padding-top: 4px;
+      margin-left: 29px;
+      flex: 0 1 48%;
+      img {
+        border-radius: 6px;
+      }
+    }
+
+    &__read-more,
+    &__read-less {
+      margin-top: 18px;
+      margin-left: 7px;
+    }
+  }
+}

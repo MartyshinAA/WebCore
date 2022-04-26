@@ -1,0 +1,308 @@
+.price-list {
+  &__title {
+    background-image: linear-gradient(
+      to right,
+      $background,
+      $container-background
+    );
+    padding: 16px;
+    border-top: 1px solid $title-border-top;
+    font-size: 16px;
+    font-weight: normal;
+    text-transform: uppercase;
+  }
+
+  &__container {
+    font-size: 14px;
+  }
+
+  &__button {
+    position: absolute;
+    display: flex;
+    width: 119px;
+    height: 32px;
+    border-radius: 16px;
+    background-color: $button;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 12px;
+    font-family: $font-bold;
+
+    a {
+      text-transform: uppercase;
+      color: $container-background;
+    }
+
+    div {
+      width: 12px;
+      height: 11px;
+      filter: brightness(0) invert(1);
+      background: url("../img/decorate/css_sprites.png") -230px -88px;
+      transform: scale(0.9);
+    }
+  }
+
+  &__offer {
+    display: flex;
+    font-family: $font-bold;
+    letter-spacing: -0.5px;
+
+    a {
+      position: relative;
+      top: 46px;
+      right: 183px;
+      width: 12px;
+      height: 11px;
+      background: url("../img/decorate/css_sprites.png") -230px -88px;
+    }
+  }
+}
+
+.send-arrow {
+  width: 12px;
+  height: 11px;
+  filter: brightness(0) invert(1);
+  background: url("../img/decorate/css_sprites.png") -230px -88px;
+  transform: scale(0.9);
+}
+
+@media screen and (max-width: 320px) {
+  .price-list {
+    &__title {
+      letter-spacing: -0.2px;
+      inline-size: 320px;
+      padding: 16px;
+    }
+
+    &__swiper {
+      width: 320px;
+      height: 263px;
+    }
+
+    &__container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      width: 260px;
+      height: 200px;
+      border: 1px solid $content-border;
+      background-color: $container-background;
+      border-radius: 6px;
+      padding: 16px;
+      padding: 16px;
+      margin: 16px 8px 10px 7px;
+      flex-direction: column;
+      ::before {
+        margin-bottom: 7px;
+        display: table;
+        color: $header;
+      }
+    }
+
+    &__service {
+      &::before {
+        content: "Ремонтные услуги";
+      }
+    }
+
+    &__price {
+      &::before {
+        content: "Цена";
+      }
+    }
+
+    &__term {
+      &::before {
+        content: "Срок";
+      }
+    }
+
+    &__button {
+      bottom: 13px;
+      right: 14px;
+    }
+
+    &__description {
+      padding-left: 16px;
+      padding-right: 17px;
+      letter-spacing: -0.9px;
+      line-height: 20px;
+    }
+
+    &__offer-content {
+      padding: 17px 17px 0 16px;
+      line-height: 23px;
+    }
+
+    .swiper-horizontal > .swiper-pagination-bullets {
+      bottom: 12px;
+    }
+
+    &__container--hide-on--320 {
+      display: none;
+    }
+  }
+}
+
+@media screen and (min-width: 321px) and (max-width: 1439px) {
+  .price-list {
+    &__title {
+      padding: 17px 33px;
+      letter-spacing: -0.4px;
+    }
+    &__title {
+      padding: 16px 24px;
+      letter-spacing: -0.4px;
+    }
+
+    &__swiper {
+      width: 94%;
+    }
+
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+      background-color: $container-background;
+      border-radius: 6px;
+    }
+
+    &__container {
+      display: flex;
+      height: 65px;
+      align-items: center;
+
+      div:first-child {
+        padding-left: 16px;
+        flex-basis: 39%;
+      }
+
+      &:nth-of-type(n + 2)::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 16px;
+        width: 97%;
+        height: 1px;
+        background-color: $content-border;
+      }
+
+      > div {
+        display: flex;
+        flex: 1;
+      }
+    }
+
+    &__container--hide-on--320 {
+      height: 65px;
+      padding-left: 30px;
+      padding-top: 20px;
+    }
+
+    &__button {
+      position: relative;
+      right: 17px;
+    }
+
+    &__description {
+      margin: 24px 0 0 23px;
+      width: 56%;
+      letter-spacing: 0.2px;
+      font-size: 14px;
+      line-height: 1.4;
+    }
+
+    &__offer {
+      padding: 19px 0 0 24px;
+
+      a {
+        top: 3px;
+        right: -10px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .price-list {
+    &__title {
+      margin-top: 25px;
+      margin-left: 5px;
+      padding: 16px 24px;
+      letter-spacing: -0.4px;
+    }
+
+    &__swiper {
+      width: 94%;
+    }
+
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+      border-radius: 6px;
+      background-color: $container-background;
+    }
+
+    .table-content {
+      border-radius: 6px;
+      display: flex;
+      flex-direction: column;
+      background-color: $container-background;
+    }
+
+    &__container {
+      display: flex;
+      height: 65px;
+      align-items: center;
+
+      div:first-child {
+        padding-left: 16px;
+        flex-basis: 46%;
+      }
+
+      &:nth-of-type(n + 2)::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 16px;
+        width: 97%;
+        height: 1px;
+        background-color: $content-border;
+      }
+
+      > div {
+        display: flex;
+        flex: 0 0 21%;
+      }
+    }
+
+    &__container--hide-on--320 {
+      height: 65px;
+      padding-left: 30px;
+      padding-top: 20px;
+    }
+
+    &__button {
+      right: 25px;
+      a {
+        margin-top: 2px;
+      }
+    }
+
+    &__description {
+      margin: 33px 0 0 28px;
+      width: 38%;
+      letter-spacing: 0.2px;
+      font-size: 14px;
+      line-height: 1.4;
+    }
+
+    &__offer {
+      padding: 19px 0 0 24px;
+
+      a {
+        top: 3px;
+        right: -10px;
+      }
+    }
+  }
+}

@@ -1,0 +1,163 @@
+.menu-container {
+  display: flex;
+  height: 88px;
+
+  &__column {
+    display: flex;
+    align-items: center;
+  }
+
+  .menu-divider {
+    align-self: center;
+    position: relative;
+    width: 2px;
+    height: 32px;
+    background: $content-border;
+    border-radius: 1px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .menu-container {
+    justify-content: space-around;
+    background-color: $container-background;
+
+    &__column {
+      justify-content: space-around;
+    }
+
+    &__column--1 {
+      flex-basis: 53%;
+    }
+
+    &__column--2 {
+      flex-basis: 42%;
+    }
+
+    .menu-divider--1 {
+      display: none;
+    }
+
+    .call-button {
+      display: none;
+    }
+
+    .chat-button {
+      display: none;
+    }
+
+    .profile-button {
+      display: none;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+  .menu-container {
+    justify-content: space-between;
+    background-color: $container-background;
+
+    &__column {
+      justify-content: space-around;
+    }
+
+    &__column--1 {
+      flex-basis: 31%;
+    }
+
+    &__column--2 {
+      flex-basis: 43%;
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .menu-container {
+    .logo {
+      display: none;
+    }
+
+    .call-button {
+      display: none;
+    }
+
+    .chat-button {
+      display: none;
+    }
+
+    .profile-button {
+      display: none;
+    }
+
+    .menu-divider {
+      display: none;
+    }
+  }
+  .menu-btn {
+    position: absolute;
+  }
+
+  .burger-button {
+    display: none;
+  }
+
+  .repair-button {
+    white-space: nowrap;
+    top: 18px;
+    left: 849px;
+
+    &::before {
+      position: relative;
+      content: "Оставить заявку";
+      top: 1px;
+      right: 139px;
+    }
+  }
+
+  .check-status-button {
+    white-space: nowrap;
+    top: 18px;
+    left: 1010px;
+
+    &::before {
+      position: relative;
+      content: "Статус ремонта";
+      right: 134px;
+    }
+  }
+}
+
+.menu-btn {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: $button;
+  background-image: url("../img/decorate/css_sprites.png");
+}
+
+.call-button {
+  background-position: 213px 118px;
+}
+.chat-button {
+  background-position: -39px 0px;
+}
+.profile-button {
+  background-position: 0px -41px;
+}
+.repair-button {
+  background-position: 1px 0px;
+}
+.check-status-button {
+  background-position: 2px 40px;
+}
+
+.burger-button {
+  background-position: -179px -76px;
+}
+
+.logo {
+  height: 52px;
+  width: 98px;
+  background: url("../img/decorate/menu/logo/logo.png") no-repeat;
+}

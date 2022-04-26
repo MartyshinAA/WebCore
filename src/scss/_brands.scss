@@ -1,0 +1,323 @@
+.brands {
+  &__title {
+    background-image: linear-gradient(
+      to right,
+      $background,
+      $container-background
+    );
+    font-size: 16px;
+    font-weight: normal;
+    text-transform: uppercase;
+    border-top: 1px solid $title-border-top;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 240px;
+    height: 72px;
+    border: 1px solid $content-border;
+    border-radius: 6px;
+    background: $container-background;
+    padding: 16px;
+    margin: 12px;
+  }
+
+  &__logo {
+    background-image: url("../img/decorate/brands/brands_sprites.png");
+  }
+
+  &__link {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid $button;
+    background: url("../img/decorate/css_sprites.png") -214px -75px;
+  }
+
+  &__logo-Lenovo {
+    width: 108px;
+    height: 32px;
+    background-position: -10px -115px;
+  }
+
+  &__logo-Samsung {
+    width: 116px;
+    height: 39px;
+    background-position: -10px -10px;
+  }
+
+  &__logo-Apple {
+    width: 44px;
+    height: 44px;
+    background-position: -82px -167px;
+  }
+
+  &__logo-ViewSonic {
+    width: 128px;
+    height: 21px;
+    background-position: -138px -115px;
+  }
+
+  &__logo-Bosch {
+    width: 128px;
+    height: 30px;
+    background-position: -146px -10px;
+  }
+
+  &__logo-Hewlett-Packard {
+    width: 52px;
+    height: 52px;
+    background-position: -10px -167px;
+  }
+
+  &__logo-Acer {
+    width: 94px;
+    height: 24px;
+    background-position: -158px -69px;
+  }
+
+  &__logo-Sony {
+    width: 128px;
+    height: 26px;
+    background-position: -10px -69px;
+  }
+
+  &__text-read-more:before {
+    content: "Показать всё";
+    position: relative;
+  }
+
+  &__text-read-less:before {
+    content: "Скрыть";
+    position: relative;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .brands {
+    &__read-more,
+    &__read-less {
+      display: none;
+    }
+
+    &__title {
+      letter-spacing: -0.2px;
+      line-height: 24px;
+      inline-size: 320px;
+      height: 80px;
+      padding: 18px 16px 18px 16px;
+      margin-top: 18px;
+    }
+
+    &__swiper {
+      width: 320px;
+      height: 142px;
+      background-color: $background;
+    }
+
+    &__container {
+      padding: 16px;
+      margin: 16px 1px 10px 15px;
+    }
+  }
+  
+  .swiper-pagination-bullet {
+    left: 0;
+    width: 12px;
+    height: 12px;
+    opacity: 1;
+    background-color: $pagination;
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: $pagination--active;
+  }
+}
+
+@media screen and (min-width: 321px) and (max-width: 769px) {
+  .brands {
+    &__title {
+      padding: 16px 24px;
+      letter-spacing: -0.4px;
+    }
+
+    &__wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 13px 0px 26px 11px;
+    }
+
+    &__container {
+      width: 224px;
+      margin: 13px 11px 3px 13px;
+    }
+
+    &__read-more,
+    &__read-less {
+      margin: 0px 0px 34px 31px;
+    }
+
+    &__text-read-more:before,
+    &__text-read-less:before {
+      left: 3px;
+    }
+  }
+
+  details.brands__details .brands__container--details-off--768 {
+    display: none;
+  }
+
+  details[open].brands__details .brands__container--details-off--768 {
+    display: flex;
+  }
+
+  details.brands__details .brands__read-less {
+    display: none;
+  }
+
+  details[open].brands__details .brands__read-less {
+    display: flex;
+    align-items: center;
+  }
+
+  details.brands__details .brands__read-more {
+    display: flex;
+    align-items: center;
+  }
+
+  details[open].brands__details .brands__read-more {
+    display: none;
+  }
+
+  .swiper-pagination {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 770px) and (max-width: 1439px) {
+  .brands {
+    &__title {
+      padding: 17px 33px;
+      letter-spacing: -0.4px;
+    }
+
+    &__wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 10px 0px 23px 11px;
+    }
+
+    &__container {
+      margin: 14px 11px 2px 21px;
+    }
+
+    &__read-more,
+    &__read-less {
+      display: flex;
+      margin: 0 0 34px 39px;
+      letter-spacing: -0.2px;
+    }
+
+    &__text-read-more:before,
+    &__text-read-less:before {
+      left: 16px;
+    }
+  }
+
+  details.brands__details .brands__container--details-off--1120 {
+    display: none;
+  }
+
+  details[open].brands__details .brands__container--details-off--1120 {
+    display: flex;
+  }
+
+  details.brands__details .brands__read-less {
+    display: none;
+  }
+
+  details[open].brands__details .brands__read-less {
+    display: flex;
+    align-items: center;
+  }
+
+  details.brands__details .brands__read-more {
+    display: flex;
+    align-items: center;
+  }
+
+  details[open].brands__details .brands__read-more {
+    display: none;
+  }
+
+  .swiper-pagination {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .brands {
+    margin-top: 64px;
+
+    &__title {
+      padding: 17px 33px;
+      letter-spacing: -0.4px;
+    }
+
+    &__wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 10px 0px 23px 11px;
+    }
+
+    &__container {
+      margin: 14px 11px 2px 21px;
+    }
+
+    &__read-more,
+    &__read-less {
+      display: flex;
+      margin: 28px 0 53px 36px;
+      letter-spacing: -0.2px;
+    }
+
+    &__text-read-more,
+    &__text-read-less {
+      &::before {
+        left: 0px;
+      }
+    }
+
+    details.brands__details .brands__container--details-off--1120 {
+      display: none;
+    }
+
+    details[open].brands__details .brands__container--details-off--1120 {
+      display: flex;
+    }
+
+    details.brands__details .brands__read-less {
+      display: none;
+    }
+
+    details[open].brands__details .brands__read-less {
+      display: flex;
+      align-items: center;
+    }
+
+    details.brands__details .brands__read-more {
+      display: flex;
+      align-items: center;
+    }
+
+    details[open].brands__details .brands__read-more {
+      display: none;
+    }
+
+    .swiper-pagination {
+      display: none;
+    }
+  }
+}

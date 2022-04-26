@@ -1,0 +1,236 @@
+.main-wrapper {
+  width: 100%;
+}
+
+.main-content {
+  z-index: 2;
+}
+
+.burger-menu {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transform-origin: top left;
+  transform: translateX(-100%);
+
+  &__wrapper {
+    background-color: $container-background;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 320px;
+    overflow: auto;
+    padding-left: 17px;
+    flex-direction: column;
+    display: flex;
+  }
+
+  menu {
+    margin: 0;
+  }
+
+  .body--block--5 {
+    height: 100%;
+  }
+
+  &__main-container {
+    flex: 1 1 auto;
+    margin-top: 10px;
+  }
+
+  .burger-menu__header-container {
+    padding-top: 18px;
+  }
+
+  .header-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .search-button {
+    position: relative;
+    right: 15px;
+    background-position: -38px -39px;
+  }
+
+  &__site-navigation-items {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__site-navigation-items li {
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    padding-top: 17px;
+    padding-bottom: 7px;
+  }
+
+  &__site-navigation-item-equipment-repair--active::before {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: -17px;
+    height: 32px;
+    width: 4px;
+    background: #41f6d7;
+    border-radius: 0 4px 4px 0;
+  }
+
+  &__site-navigation-item-equipment-repair--active {
+    position: relative;
+    color: #7e7e82;
+  }
+
+  .footer__burger {
+    margin-bottom: 26px;
+  }
+
+  .footer-menu__burger {
+    display: flex;
+
+    .chat-button {
+      margin-left: 16px;
+    }
+
+    .profile-button {
+      margin-left: 16px;
+    }
+  }
+
+  .footer-menu__burger li {
+    margin-right: 16px;
+  }
+
+  .contacts__burger a {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    margin-top: 19px;
+  }
+
+  .contacts__tel {
+    font-family: $font-bold;
+    font-size: 24px;
+    letter-spacing: -0.5px;
+  }
+  .languages {
+    margin-top: 14px;
+  }
+
+  .languages__list--burger {
+    display: flex;
+  }
+
+  .languages__list--burger li {
+    margin-right: 8px;
+  }
+
+  .languages__RU--active {
+    color: #7e7e82;
+  }
+
+  .html--block--5 button:hover,
+  .html--block--5 button:focus {
+    transition: 1s linear;
+    opacity: 0.3;
+  }
+}
+
+.close-button {
+  left: -8px;
+  background-position: -79px -37px;
+}
+
+@media screen and (min-width: 1440px) {
+
+  .burger-menu {
+
+    &__site-navigation-item-equipment-repair--active::before {
+      top: 6px;
+    }
+
+    &__close {
+      display: none;
+    }
+
+    .search-button {
+      position: absolute;
+      left: 236px;
+    }
+
+    &__wrapper {
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+    }
+
+    &__site-navigation-items {
+      li {
+        padding-top: 10px;
+        letter-spacing: -0.7px;
+      }
+    }
+  }
+
+  .footer-menu {
+    margin-top: 221px;
+
+    .call-button {
+      position: relative;
+      left: -5px;
+    }
+
+    .chat-button {
+      position: relative;
+      left: 11px;
+    }
+
+    .profile-button {
+      position: relative;
+      left: 27px;
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .main-content {
+    width: calc(100% - 320px);
+    transform: translateX(320px);
+    overflow-x: hidden;
+  }
+
+  .header-menu {
+    margin-top: 11px;
+  }
+
+  .burger-menu {
+    transform: translateX(0);
+
+    width: 320px;
+
+    &__main-container {
+      padding-top: 27px;
+    }
+
+    &__search {
+      right: 43px;
+    }
+  }
+}
+
+.menu-open {
+  background-color: $popup-background;
+  transform: translateX(0px);
+  .burger-menu__wrapper {
+    -webkit-box-shadow: 30px 0px 40px 0px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 30px 0px 40px 0px rgba(34, 60, 80, 0.2);
+    box-shadow: 30px 0px 40px 0px rgba(34, 60, 80, 0.2);
+  }
+}
